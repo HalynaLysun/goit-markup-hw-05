@@ -109,6 +109,13 @@ img {
     letter-spacing: 0.02em;
 }
 
+.header-link::after {
+    width: 66px;
+    height: 4px;
+    background-color: var(--color-filtr);
+    border-radius: 2px;
+}
+
 .header-link:hover,
 .header-link:focus {
     color: var(--color-filtr);
@@ -432,6 +439,7 @@ img {
 
 .portfoloi-item {
     flex-basis: calc((100% - 48px) / 3);
+
 }
 
 .portfolio-item:hover,
@@ -440,6 +448,31 @@ img {
     0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.box-images {
+    position: relative;
+}
+
+.box {
+    padding: 40px 32px 164px;
+    background-color: var(--color-active);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.box-images:hover .box,
+.box-images:focus .box {
+    opacity: 1;
+}
+
+.box-text {
+    max-width: 296px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-shadow);
 }
 
 .portfolio-container {
