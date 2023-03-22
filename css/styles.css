@@ -107,9 +107,12 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link::after {
+.active::after {
+    content: '';
     width: 66px;
     height: 4px;
     background-color: var(--color-filtr);
@@ -131,6 +134,8 @@ img {
 
 .header-address-link {
     color: var(--color-secondary);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .header-address-link.link:hover,
@@ -189,6 +194,8 @@ img {
     margin: 0 auto;
     display: block;
     border: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-title-btn:hover,
@@ -335,6 +342,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 250ms;
+    transition-timing-function:
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-link:hover,
@@ -375,6 +385,9 @@ img {
     justify-content: center;
     align-items: center;
     color: #8E8F99;
+    transition-duration: 250ms;
+    transition-timing-function:
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item {
@@ -419,6 +432,9 @@ img {
     padding: 12px 24px;
     border: 1px solid var(--color-brand);
     border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function:
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-btn:hover,
@@ -439,7 +455,8 @@ img {
 
 .portfoloi-item {
     flex-basis: calc((100% - 48px) / 3);
-
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover,
@@ -460,6 +477,8 @@ img {
     position: absolute;
     top: 0;
     opacity: 0;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-images:hover .box,
@@ -566,6 +585,9 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 250ms;
+    transition-timing-function:
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-title {
