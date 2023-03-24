@@ -469,6 +469,7 @@ img {
 
 .box-images {
     position: relative;
+    overflow: hidden;
 }
 
 .box {
@@ -476,14 +477,7 @@ img {
     background-color: var(--color-active);
     position: absolute;
     top: 0;
-    opacity: 0;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.box-images:hover .box,
-.box-images:focus .box {
-    opacity: 1;
+    transform: translatey(100%);
 }
 
 .box-text {
@@ -492,6 +486,13 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-shadow);
+}
+
+.portfolio-item:hover .box,
+.portfolio-item:focus .box {
+    transform: translatey(0);
+    transition: transform 250ms linear;
+
 }
 
 .portfolio-container {
