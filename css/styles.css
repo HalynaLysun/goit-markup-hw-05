@@ -113,6 +113,7 @@ img {
 
 .active {
     color: var(--color-filtr);
+    position: relative;
 }
 
 .active::after {
@@ -123,6 +124,7 @@ img {
     height: 4px;
     background-color: var(--color-filtr);
     border-radius: 2px;
+    position: absolute;
 }
 
 .header-link:hover,
@@ -619,14 +621,16 @@ img {
 .backdrop {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    transition: opacity 250ms linear, visibility 250ms linear;
+    transition: opacity 250ms linear cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms linear cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
-    width: 408px;
+    max-width: 408px;
     min-height: 576px;
     padding: 24px;
     background-color: #FCFCFC;
@@ -639,10 +643,15 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    position: relative;
+    transition-duration: 250ms;
+    transition-timing-function:
+    cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%)
+    scale(1.2);
 }
 
 .modal-dutton {
@@ -653,10 +662,16 @@ img {
 .modal-close {
     width: 24px;
     height: 24px;
+    position: absolute;
+    transform: translate(324px, -12px);
+    transition-duration: 250ms;
+    transition-timing-function:
+    cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .is-hidden {
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
+    pointer-events: none
 }
